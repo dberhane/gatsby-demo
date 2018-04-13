@@ -10,7 +10,7 @@ class PostTemplate extends Component {
     const post = this.props.data.wordpressPost
 
     return (
-      <Grid container>
+      <Grid container stackable columns={2}>
         <Grid.Column width={12}>
           <h1 dangerouslySetInnerHTML={{ __html: post.title }} />
           <div dangerouslySetInnerHTML={{ __html: post.content }} />
