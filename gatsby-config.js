@@ -40,6 +40,6 @@ module.exports = {
   },
   ],
 
-  pathPrefix: `/wp-gatsby`,
+  pathPrefix: `/gatsby-demo`,
 
 };
