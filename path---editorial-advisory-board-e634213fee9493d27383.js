@@ -1,0 +1,2 @@
+webpackJsonp([0xd21325ecab42],{1337:function(e,t){e.exports={data:{wordpressPage:{title:"Editorial advisory board",content:'<p>&nbsp;</p>\n<p><a href="http://bmjopen.bmj.com/site/about/edboard.xhtml" target="_blank">Click here for the BMJ Open editorial board</a>.<!--TrendMD v2.4.3--></p>\n',date:"September 24, 2010"},site:{id:"Site",siteMetadata:{title:"Gatsby for BMJ blog sites"}}},pathContext:{id:"3371c4b8-ca65-56f2-8d6d-ee43464c5c31"}}}});
+//# sourceMappingURL=path---editorial-advisory-board-e634213fee9493d27383.js.map
