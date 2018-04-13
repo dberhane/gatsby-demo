@@ -3,14 +3,21 @@ import PropTypes from "prop-types"
 
 import { Button, Header, Grid, Segment, Container } from 'semantic-ui-react'
 
+import BlogRoll from '../components/BlogRoll'
+
 class PostTemplate extends Component {
   render() {
     const post = this.props.data.wordpressPost
 
     return (
       <Grid container>
-            <h1 dangerouslySetInnerHTML={{ __html: post.title }} />
-            <div dangerouslySetInnerHTML={{ __html: post.content }} />
+        <Grid.Column width={12}>
+          <h1 dangerouslySetInnerHTML={{ __html: post.title }} />
+          <div dangerouslySetInnerHTML={{ __html: post.content }} />
+        </Grid.Column>
+        <Grid.Column width={4}>
+          <BlogRoll />
+        </Grid.Column>
       </Grid>
     )
   }

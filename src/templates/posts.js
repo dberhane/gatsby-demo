@@ -44,14 +44,14 @@ const IndexPage = ({ data, pathContext }) => {
                             </Item.Content>
                         </Item>
                     ))}
+
                 </Item.Group>
 
-
                 <Segment basic clearing>
-                    <Button basic color='blue' floated='left'><NavLink test={first} url={"/posts/" + previousUrl} text="Previous Page"/></Button>
-                    <Button basic color='blue' floated='right'><NavLink test={first} url={"/posts/" + nextUrl} text="Next Page"/></Button>
+                    <Button basic color='blue' floated='left'><Button.Content><NavLink test={first} url={"/posts/" + previousUrl} text="Previous Page" /></Button.Content></Button>
+                    <Button basic color='blue' floated='right'><Button.Content><NavLink test={last} url={"/posts/" + nextUrl} text="Next Page" /></Button.Content></Button>
                 </Segment>
-            </Grid.Column>  
+            </Grid.Column>
 
             <Grid.Column width={4}>
                 <BlogRoll />
