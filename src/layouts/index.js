@@ -3,9 +3,7 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 
 import Header from '../components/Header'
-//import 'bootstrap/dist/css/bootstrap.css';
-//import './index.css'
-//import './index.css'
+
 import 'semantic-ui-css/semantic.min.css'
 
 const TemplateWrapper = ({ children }) => (
@@ -17,6 +15,7 @@ const TemplateWrapper = ({ children }) => (
         { name: 'keywords', content: 'sample, something' },
       ]}
     />
+
     <Header />
     <div>
       {children()}
