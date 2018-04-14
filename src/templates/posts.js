@@ -18,16 +18,15 @@ const IndexPage = ({ data, pathContext }) => {
     const previousUrl = index - 1 == 1 ? "" : (index - 1).toString();
     const nextUrl = (index + 1).toString();
 
-    console.log(group)
+    //console.log(group)
 
     return (
-        <Grid container stackable columns={2}>
+        <Grid container stackable columns={2} style={{marginTop:'1.5em'}}>
 
             <Grid.Column width={12}>
 
                 <Header as='h1'>Latest blogs</Header>
 
-                <h4>{pageCount} Pages</h4>
                 <Item.Group>
                     {group.map(({ node }) => (
                         <Item key={node.slug} className={"post"} style={{ marginBottom: 50 }}>

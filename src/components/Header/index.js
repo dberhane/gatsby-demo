@@ -8,9 +8,8 @@ import { Advertisement, Menu, Button, Image, Container, Segment } from 'semantic
 const Header = () => (
   <div>
    
-      <Advertisement as={Image} centered unit='Mobile leaderboard' fluid style={{marginTop:'1.0em', marginBottom:'5em'}}>
-        <Link to={'/posts'}><Image src={banner} alt="banner" fluid style={{minHeight: 95}} /></Link>
-      </Advertisement>
+        <Link to={'/posts'}><Image centered src={banner} alt="banner" bordered fluid style={{ maxHeight:90, maxWidth:728, marginTop:"1em"}} /></Link>
+
 
     <Menu pointing size='large' color='purple' inverted stackable>
       <Container>
