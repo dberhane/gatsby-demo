@@ -432,6 +432,10 @@
       "path---posts-post-top-10-most-read-in-may-coffee-and-liver-cancer-risk-vaginal-breech-delivery-and-perinatal-death-and-the-association-between-area-deprivation-and-generalised-anxiety-disorder-in-women-versus-men-02334e18d35703372d54.js",
       "path---posts-post-top-10-most-read-in-may-coffee-and-liver-cancer-risk-vaginal-breech-delivery-and-perinatal-death-and-the-association-between-area-deprivation-and-generalised-anxiety-disorder-in-women-versus-men-02334e18d35703372d54.js.map"
     ],
+    "component---node-modules-gatsby-plugin-offline-app-shell-js": [
+      "component---node-modules-gatsby-plugin-offline-app-shell-js-5c4c5a0f7af9dc69d6d7.js",
+      "component---node-modules-gatsby-plugin-offline-app-shell-js-5c4c5a0f7af9dc69d6d7.js.map"
+    ],
     "path---posts-post-rock-stars-hypnotics-and-the-olympics-most-read-articles-in-january": [
       "path---posts-post-rock-stars-hypnotics-and-the-olympics-most-read-articles-in-january-ec42d4a8bbdbe758555f.js",
       "path---posts-post-rock-stars-hypnotics-and-the-olympics-most-read-articles-in-january-ec42d4a8bbdbe758555f.js.map"
@@ -936,6 +940,10 @@
       "path---posts-post-salty-cheese-unprepared-graduates-and-coersive-anal-sex-most-read-articles-in-august-94de351035f228389d38.js",
       "path---posts-post-salty-cheese-unprepared-graduates-and-coersive-anal-sex-most-read-articles-in-august-94de351035f228389d38.js.map"
     ],
+    "path---offline-plugin-app-shell-fallback": [
+      "path---offline-plugin-app-shell-fallback-a0e39f21c11f6a62c5ab.js",
+      "path---offline-plugin-app-shell-fallback-a0e39f21c11f6a62c5ab.js.map"
+    ],
     "path---posts-post-physically-active-mid-lifers-more-likely-to-be-active-into-old-age": [
       "path---posts-post-physically-active-mid-lifers-more-likely-to-be-active-into-old-age-ca785af72ccf081e2200.js",
       "path---posts-post-physically-active-mid-lifers-more-likely-to-be-active-into-old-age-ca785af72ccf081e2200.js.map"
@@ -1037,9 +1045,9 @@
       "path---posts-post-open-access-week-the-next-generation-5a50352643d9189ba836.js.map"
     ],
     "app": [
-      "app-db049dfcb8402e2335da.js",
+      "app-67bd1d6c51362efdb318.js",
       "build-js-styles.css",
-      "app-db049dfcb8402e2335da.js.map",
+      "app-67bd1d6c51362efdb318.js.map",
       "build-js-styles.css.map"
     ],
     "path---posts-post-lower-salt-intake-likely-to-have-had-key-role-in-plummeting-cardiovascular-disease-deaths-in-past-decade": [
