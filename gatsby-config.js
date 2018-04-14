@@ -38,6 +38,20 @@ module.exports = {
       },
     },
   },
+
+  {
+    resolve: `gatsby-plugin-manifest`,
+    options: {
+      name: "BMJ Open blogs",
+      short_name: "BMJOpen",
+      start_url: "/posts",
+      background_color: "#f7f0eb",
+      theme_color: "#a2466c",
+      display: "minimal-ui",
+      icon: "src/components/Header/logo-bmjopen.png" // This path is relative to the root of the site.
+    },
+  },
+  `gatsby-plugin-offline`,
   ],
 
   pathPrefix: `/gatsby-demo`,
