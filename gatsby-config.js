@@ -44,7 +44,7 @@ module.exports = {
     options: {
       name: "BMJ Open blogs",
       short_name: "BMJOpen",
-      start_url: "/",
+      start_url: "/gatsby-demo/",
       background_color: "#f7f0eb",
       theme_color: "#a2466c",
       display: "minimal-ui",
