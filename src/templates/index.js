@@ -19,7 +19,7 @@ const IndexPage = ({ data, pathContext }) => {
     const nextUrl = (index + 1).toString();
 
     //console.log(group)
-
+    console.log(nextUrl)
     return (
         <Grid container stackable columns={2} style={{marginTop:'1.5em'}}>
 
@@ -32,7 +32,7 @@ const IndexPage = ({ data, pathContext }) => {
                         <Item key={node.slug} className={"post"} style={{ marginBottom: 50 }}>
                             <Item.Content>
                                 <Item.Header as='h2'>
-                                    <Link to={'/posts/post/' + node.slug}>
+                                    <Link to={'/post/' + node.slug}>
                                         {node.title}
                                     </Link>
                                 </Item.Header>
@@ -47,8 +47,8 @@ const IndexPage = ({ data, pathContext }) => {
                 </Item.Group>
 
                 <Segment basic clearing>
-                    <Button basic color='blue' floated='left'><Button.Content><NavLink test={first} url={"/posts/" + previousUrl} text="Previous Page" /></Button.Content></Button>
-                    <Button basic color='blue' floated='right'><Button.Content><NavLink test={last} url={"/posts/" + nextUrl} text="Next Page" /></Button.Content></Button>
+                    <Button basic color='blue' floated='left'><Button.Content><NavLink test={first} url={previousUrl} text="Previous Page" /></Button.Content></Button>
+                    <Button basic color='blue' floated='right'><Button.Content><NavLink test={last} url={nextUrl} text="Next Page" /></Button.Content></Button>
                 </Segment>
             </Grid.Column>
 

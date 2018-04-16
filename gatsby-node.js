@@ -92,7 +92,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
             reject(result.errors)
           }
           const postTemplate = path.resolve(`./src/templates/post.js`)
-          const postsTemplate = path.resolve(`./src/templates/posts.js`)
+          const postsTemplate = path.resolve(`./src/templates/index.js`)
 
           // Create Posts
 /*          createPage({
@@ -104,9 +104,9 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
           createPaginatedPages({
             edges: result.data.allWordpressPost.edges,
             createPage: createPage,
-            pageTemplate: "src/templates/posts.js",
+            pageTemplate: "src/templates/index.js",
             pageLength: 10,
-            pathPrefix: "posts"
+            pathPrefix: ""
           })
 
           // We want to create a detailed page for each
@@ -114,7 +114,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
           // The Post ID is prefixed with 'POST_'
           _.each(result.data.allWordpressPost.edges, edge => {
             createPage({
-              path: `/posts/post/${edge.node.slug}`,
+              path: `/post/${edge.node.slug}`,
               component: slash(postTemplate),
               context: {
                 id: edge.node.id,

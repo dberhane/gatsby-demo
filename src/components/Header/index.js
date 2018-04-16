@@ -8,14 +8,14 @@ import { Advertisement, Menu, Button, Image, Container, Segment } from 'semantic
 const Header = () => (
   <div>
    
-        <Link to={'/posts'}><Image centered src={banner} alt="banner" bordered fluid style={{ maxHeight:90, maxWidth:728, marginTop:"1em"}} /></Link>
+        <Link to={'/'}><Image centered src={banner} alt="banner" bordered fluid style={{ maxHeight:90, maxWidth:728, marginTop:"1em"}} /></Link>
 
 
     <Menu pointing size='large' color='purple' inverted stackable>
       <Container>
-        <Menu.Item><Link to={'/posts'}><img src={logo} alt="Logo" style={{ width: '12.0em' }} /></Link></Menu.Item>
+        <Menu.Item><Link to={'/'}><img src={logo} alt="Logo" style={{ width: '12.0em' }} /></Link></Menu.Item>
         <Menu.Menu position='right'>
-          <Menu.Item position='right'><Link to={'/posts'}>BMJ Open blogs</Link></Menu.Item>
+          <Menu.Item position='right'><Link to={'/'}>BMJ Open blogs</Link></Menu.Item>
           <Menu.Item position='right'>About us</Menu.Item>
           <Menu.Item position='right'>Topic Index</Menu.Item>
           <Menu.Item position='right'>Home</Menu.Item>
