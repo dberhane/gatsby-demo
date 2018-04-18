@@ -9,7 +9,7 @@ import 'semantic-ui-css/semantic.min.css'
 const TemplateWrapper = ({ children }) => (
   <div>
     <Helmet
-      title="PWA demo for BMJOpen blogs"
+      title="PWA demo of BMJOpen blogs"
       meta={[
         { name: 'description', content: 'Sample' },
         { name: 'keywords', content: 'sample, something' },
