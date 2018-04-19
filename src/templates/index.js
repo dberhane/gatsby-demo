@@ -75,6 +75,7 @@ export const query = graphql`
             accountId
             webPropertyId
             name
+            websiteUrl
           }
           bmjsiteData {
             pagePath
