@@ -5,9 +5,11 @@ class MostRead extends React.Component {
 
     render () {
 
-        const mostReadItems = this.props.gdata.allDataJson.edges[0].node.bmjsiteData
-        const websiteUrl = this.props.gdata.allDataJson.edges[0].node.bmjsiteHead[0].websiteUrl
-        
+        const gsite = this.props.gsite ? this.props.gsite : 0
+        console.log(gsite)
+        const mostReadItems = this.props.gdata.allDataJson.edges[gsite].node.bmjsiteData
+        const websiteUrl = this.props.gdata.allDataJson.edges[gsite].node.bmjsiteHead[0].websiteUrl
+        console.log(this.props.gdata.allDataJson.edges[1])
         return (
             <div style={{paddingBottom:'2.5em'}}>
               <Header as='h2'>BMJ Open most read</Header>  

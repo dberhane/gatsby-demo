@@ -3,4 +3,4 @@
 # run the apps "npm run start"
 
 curl -o ../data/bmj-realtime.json --insecure https://localhost:2002/realtime/bmjsite?filter=content
-curl -o ../data/bmjopen-last30days.json --insecure https://localhost:2002/bmjsite?filter=content/.*[a-z][a-z]*[0-9][0-9]*\&site=34866726
+curl -o ../data/bmjopen-last30days.json --insecure  -g 'https://localhost:2002/bmjsite?filter=content.*[a-z][a-z]*[0-9][0-9]*&site=34866726'

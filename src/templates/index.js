@@ -14,7 +14,7 @@ const NavLink = props => {
     }
 };
 
-const IndexPage = ({ data, pathContext }) => {
+const IndexPage = ({ data, site, pathContext }) => {
     const { group, index, first, last, pageCount } = pathContext;
     const previousUrl = index - 1 == 1 ? "" : (index - 1).toString();
     const nextUrl = (index + 1).toString();
@@ -55,7 +55,7 @@ const IndexPage = ({ data, pathContext }) => {
             </Grid.Column>
 
             <Grid.Column width={4}>
-                <MostRead gdata={data} /> 
+                <MostRead gdata={data} gsite={0} /> 
                 <BlogRoll />
             </Grid.Column>
 
