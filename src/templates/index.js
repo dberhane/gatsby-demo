@@ -4,6 +4,7 @@ import Link from "gatsby-link";
 import { Button, Header, Grid, Image, Segment, Container, Item, Divider } from 'semantic-ui-react'
 
 import BlogRoll from '../components/BlogRoll'
+import MostRead from '../components/MostRead'
 
 const NavLink = props => {
     if (!props.test) {
@@ -18,7 +19,8 @@ const IndexPage = ({ data, pathContext }) => {
     const previousUrl = index - 1 == 1 ? "" : (index - 1).toString();
     const nextUrl = (index + 1).toString();
 
-    //console.log(group)
+    console.log(data)
+    console.log(pathContext)
 
     return (
         <Grid container stackable columns={2} style={{marginTop:'1.5em'}}>
@@ -29,7 +31,7 @@ const IndexPage = ({ data, pathContext }) => {
 
                 <Item.Group>
                     {group.map(({ node }) => (
-                        <Item key={node.slug} className={"post"} style={{ marginBottom: 50 }}>
+                        <Item key={node.id} className={"post"} style={{ marginBottom: 50 }}>
                             <Item.Content>
                                 <Item.Header as='h2'>
                                     <Link to={'/post/' + node.slug}>
@@ -53,6 +55,7 @@ const IndexPage = ({ data, pathContext }) => {
             </Grid.Column>
 
             <Grid.Column width={4}>
+                <MostRead gdata={data} /> 
                 <BlogRoll />
             </Grid.Column>
 
@@ -60,3 +63,26 @@ const IndexPage = ({ data, pathContext }) => {
     );
 };
 export default IndexPage;
+
+
+export const query = graphql`
+  query allmostReadFeed {
+    allDataJson {
+      edges {
+        node {
+          bmjsiteHead {
+            id
+            accountId
+            webPropertyId
+            name
+          }
+          bmjsiteData {
+            pagePath
+            pageTitle
+            pageviews
+          }
+        }
+      }
+    }
+  }
+`

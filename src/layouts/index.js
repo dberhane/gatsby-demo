@@ -6,7 +6,7 @@ import Header from '../components/Header'
 
 import 'semantic-ui-css/semantic.min.css'
 
-const TemplateWrapper = ({ children }) => (
+const TemplateWrapper = ({ children, data}) => (
   <div>
     <Helmet
       title="PWA demo of BMJOpen blogs"
