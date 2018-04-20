@@ -4,8 +4,8 @@ import Link from "gatsby-link"
 import { Segment, List, Container } from 'semantic-ui-react'
 
 const BlogRoll = () => (
-    <Segment padded>
-        <List relaxed>
+    <div style={{paddingBottom:'2.5em'}}>
+        <List relaxed style={{paddingBottom:'1.0em'}}>
             <List.Item>
                 <List.Header as='h2'>BLOGROLL</List.Header>
             </List.Item>
@@ -33,7 +33,7 @@ const BlogRoll = () => (
             <List.Item>UK PubMed Central Blog</List.Item>
         </List>
 
-    </Segment>
+    </div>
 )
 
 export default BlogRoll

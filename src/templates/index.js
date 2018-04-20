@@ -5,6 +5,7 @@ import { Button, Header, Grid, Image, Segment, Container, Item, Divider } from '
 
 import BlogRoll from '../components/BlogRoll'
 import MostRead from '../components/MostRead'
+import Categories from '../components/Categories'
 
 const NavLink = props => {
     if (!props.test) {
@@ -55,8 +56,9 @@ const IndexPage = ({ data, pathContext }) => {
             </Grid.Column>
 
             <Grid.Column width={4}>
-                <MostRead gdata={data} gsite={0} ghead='BMJ Open most read'/> 
+                <Categories categories={data}/>
                 <BlogRoll />
+                <MostRead gdata={data} gsite={0} ghead='BMJ Open most read'/> 
             </Grid.Column>
 
         </Grid>
@@ -85,5 +87,15 @@ export const query = graphql`
         }
       }
     }
+
+    allWordpressCategory {
+        edges {
+          node {
+            id
+            name
+            slug
+          }
+        }
+      }
   }
 `
