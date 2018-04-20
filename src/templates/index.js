@@ -14,7 +14,7 @@ const NavLink = props => {
     }
 };
 
-const IndexPage = ({ data, site, pathContext }) => {
+const IndexPage = ({ data, pathContext }) => {
     const { group, index, first, last, pageCount } = pathContext;
     const previousUrl = index - 1 == 1 ? "" : (index - 1).toString();
     const nextUrl = (index + 1).toString();
@@ -55,7 +55,7 @@ const IndexPage = ({ data, site, pathContext }) => {
             </Grid.Column>
 
             <Grid.Column width={4}>
-                <MostRead gdata={data} gsite={0} /> 
+                <MostRead gdata={data} gsite={0} ghead='BMJ Open most read'/> 
                 <BlogRoll />
             </Grid.Column>
 
@@ -67,7 +67,7 @@ export default IndexPage;
 
 export const query = graphql`
   query allmostReadFeed {
-    allDataJson {
+    allDataJson (filter: {id: {regex: "/.*bmjopen-last30days/"}}) {
       edges {
         node {
           bmjsiteHead {

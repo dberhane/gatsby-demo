@@ -6,13 +6,14 @@ class MostRead extends React.Component {
     render () {
 
         const gsite = this.props.gsite ? this.props.gsite : 0
+        const ghead = this.props.ghead ? this.props.ghead : 'Most read'
         console.log(gsite)
         const mostReadItems = this.props.gdata.allDataJson.edges[gsite].node.bmjsiteData
         const websiteUrl = this.props.gdata.allDataJson.edges[gsite].node.bmjsiteHead[0].websiteUrl
         console.log(this.props.gdata.allDataJson.edges[1])
         return (
             <div style={{paddingBottom:'2.5em'}}>
-              <Header as='h2'>BMJ Open most read</Header>  
+              <Header as='h2'>{ghead}</Header>  
               <List ordered divided relaxed>
                   {mostReadItems.map((item,i) => 
                       <List.Item key={item.pagePath}><a href={ `${websiteUrl}${item.pagePath}` }>{item.pageTitle}</a></List.Item>
