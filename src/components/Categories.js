@@ -12,8 +12,8 @@ class Categories extends Component {
             <div style={{paddingBottom:'2.5em'}}>
                 <h2>Categories</h2>
                 <List divided relaxed>
-                {categories.map((item, i)=>
-                 <List.Item key={item.node.id}><Link to={`category/${item.node.slug}`}>{ item.node.name }</Link></List.Item>) }
+                {categories.map(({node}, i)=>
+                 <List.Item key={node.id}><Link to={`category/${node.slug}`}>{ node.name }</Link></List.Item>) }
                 </List>
             </div>
         );
