@@ -12,6 +12,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
     // Templates
     const pageTemplate = path.resolve("./src/templates/page.js");
     const postTemplate = path.resolve("./src/templates/post.js");
+    const postCategoryTemplate = path.resolve("./src/templates/post-category.js")
 
     resolve(
       graphql(allQueries).then(result => {
@@ -50,6 +51,34 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
             },
           });
         })
+
+        const postCategories = result.data.allWordpressPost.edges
+
+        createPaginatedPages({
+          edges: postCategories,
+          createPage: createPage,
+          pageTemplate: "src/templates/post-categories.js",
+          pageLength: 10,
+          pathPrefix: "category"
+        })
+
+        postCategories.forEach(({node}) => {
+          
+          node.categories.forEach((category) => {
+           console.log(category)
+            createPage({
+              path: `/category/${category.slug}/`,
+              component: slash(postCategoryTemplate),
+              context: {
+                name: category.name,
+              },
+            });
+  
+
+          })
+  
+  
+        })      
 
       })
     )

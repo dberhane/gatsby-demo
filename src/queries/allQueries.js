@@ -12,6 +12,7 @@ module.exports = `
         }
         
         allWordpressPost {
+
             edges {
               node {
                 id
@@ -22,8 +23,15 @@ module.exports = `
                 date(formatString: "MMMM DD, YYYY")
                 template
                 format
+                categories {
+                  id
+                  name
+                  slug
+                }
               }
             }
           }
-    }
+                      
+    
+        }
 `
